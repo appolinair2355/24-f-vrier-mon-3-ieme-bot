@@ -23,7 +23,7 @@ BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', '7573497633:AAHk9K15yTCiJP-zruJrc9v8
 SOURCE_CHANNEL_ID = -1002682552255
 
 # Canal prédictions : canal où le bot envoie ses prédictions
-PREDICTION_CHANNEL_ID = -1003814088712
+PREDICTION_CHANNEL_ID = -1003430118891
 
 # ID Telegram de l'administrateur (obtenez-le via @userinfobot)
 ADMIN_ID = 1190237801
