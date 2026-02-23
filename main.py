@@ -16,29 +16,18 @@ from aiohttp import web
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 
+from config import (
+    API_ID, API_HASH, BOT_TOKEN,
+    SOURCE_CHANNEL_ID, PREDICTION_CHANNEL_ID, ADMIN_ID,
+    PORT, PREDICTION_TIMEOUT, TRIGGER_DISTANCE, JOKE_INTERVAL_SECONDS
+)
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[logging.StreamHandler(sys.stdout)]
 )
 logger = logging.getLogger(__name__)
-
-# ============================================================
-# CONFIGURATION
-# ============================================================
-
-API_ID = 29177661
-API_HASH = "a8639172fa8d35dbfd8ea46286d349ab"
-BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', '')
-
-SOURCE_CHANNEL_ID = -1002682552255
-PREDICTION_CHANNEL_ID = -1003814088712
-ADMIN_ID = 1190237801
-PORT = int(os.getenv('PORT', 10000))
-
-PREDICTION_TIMEOUT = 10
-TRIGGER_DISTANCE = 2
-JOKE_INTERVAL_SECONDS = 300  # 5 minutes
 
 # ============================================================
 # VARIABLES GLOBALES
