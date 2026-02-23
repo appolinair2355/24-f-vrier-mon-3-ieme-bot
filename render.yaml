@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: prediction-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
+    plan: free
